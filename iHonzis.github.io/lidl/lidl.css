@@ -1,0 +1,32 @@
+div {
+    background-color: rgb(255, 167, 181);
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    margin: 0; /* Remove margin */
+    width: 100%; /* Set width to 100% of the parent */
+    padding: 1px 0; /* Add 1 pixels of padding to the top and bottom */
+}
+
+#notification button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+h1 {
+    position: relative;
+    left: auto;
+}
+
+body {
+    padding-top: 25px; /* Height of the div + 5px space */
+}
+
