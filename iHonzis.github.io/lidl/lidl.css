@@ -21,12 +21,62 @@ div {
     padding: 5px;
 }
 
-h1 {
+h2 {
     position: relative;
     left: auto;
 }
 
 body {
-    padding-top: 25px; /* Height of the div + 5px space */
+    padding-top: 50px; /* Height of the div + 5px space */
 }
 
+#logo{
+    border: 1px solid black;
+    width: 90px;
+}
+
+#logo, #slogan, #searchForm{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#slogan{
+    margin-top: 3px;
+    border: 1px solid black;
+    text-align: center;
+    width: 200px;
+    margin-left: 10px;
+}
+
+#searchForm{
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 90px;
+}
+
+#search{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+form{
+    padding-top: 30;
+}
+
+#love{
+    padding-left: 50px;
+}
+
+#weight, #nakup{
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#phone{
+    padding-left: 5px;
+}
+
+#login{
+    text-decoration: none;
+}
