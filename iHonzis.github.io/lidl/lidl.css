@@ -53,6 +53,9 @@ body {
     margin-top: 10px;
     text-align: center;
     padding-left: 90px;
+    position: relative;
+    top: -40px;
+    height: 30px;
 }
 
 #search{
@@ -114,4 +117,37 @@ form{
     color: rgb(67, 67, 67);
     text-decoration: none;
     vertical-align: middle;
+}
+
+#lupa{
+    position: relative;
+top: 40px;
+}
+
+/* Initial state of the submenu is not displayed */
+.submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9; /* Background color of submenu */
+    min-width: 160px; /* Minimum width of submenu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+    z-index: 1;
+}
+
+/* The submenu will be displayed when hovering over the menu link */
+.menu-link:hover .submenu {
+    display: block;
+}
+
+/* Style for labels within the submenu */
+.menu-link .submenu label {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-link .submenu label:hover {
+    background-color: #ddd; /* Background color when hovering over submenu items */
 }
