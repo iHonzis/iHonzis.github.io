@@ -30,7 +30,7 @@ body {
     padding-top: 50px; /* Height of the div + 5px space */
 }
 
-#logo{
+#logo, #logo2{
     border: 1px solid black;
     width: 90px;
 }
@@ -41,7 +41,12 @@ body {
     padding: 0;
 }
 
-#slogan{
+#logo2, #slogan2{
+    top: -180px;
+    padding-right: 100px;
+}
+
+#slogan, #slogan2{
     margin-top: 3px;
     border: 1px solid black;
     text-align: center;
@@ -151,4 +156,19 @@ top: 40px;
 
 .menu-link .submenu label:hover {
     background-color: #ddd; /* Background color when hovering over submenu items */
+}
+
+#logo2, #slogan2, #rest{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#rest{
+    margin-left: 100px;
+}
+
+#odkaz{
+    text-decoration: none;
+    color: black;
 }
