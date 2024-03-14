@@ -8,6 +8,24 @@
     <link rel="stylesheet" type="text/css" href="lidl.css">
     <script src="lidl.js"></script>
 
+    <style>
+        .container {
+          display: flex; /* Use flexbox to align items in a row */
+        }
+        .rectangle {
+          width: 400px; /* Set the width of each rectangle */
+          height: 500px; /* Set the height of each rectangle */
+          background-color: #6495ED; /* A sample color for the rectangles */
+          margin-right: 20px; /* Optional: Adds some space between the rectangles */
+          border-radius: 30px;
+          margin-left: 50px;
+        }
+        /* Remove margin for the last rectangle */
+        .rectangle:last-child {
+          margin-right: 0;
+        }
+      </style>
+
 </head>
 
 <body>
@@ -137,6 +155,23 @@ var x = setInterval(function() {
 </script>
 
     <a href="../index.html">Back to index</a>
+
+<hr>
+
+<div class="container">
+    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
+    <div class="rectangle">Konkretni</div>
+    </a>
+
+    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
+    <div class="rectangle">Ikony</div>
+    </a>
+
+    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
+    <div class="rectangle">Produktu</div>
+    </a>
+  </div>
+
 
 <hr>
 
