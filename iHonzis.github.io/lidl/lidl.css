@@ -199,10 +199,10 @@ top: 40px;
     display: flex;
   }
 
-  #container, #container2, #container3 {
+  #container, #container2, #container3, #container4 {
     display: flex;
     align-items: center; /* Align items vertically */
-    margin-right: 100px; /* Adjust the margin as needed */
+    margin-right: 130px; /* Adjust the margin as needed */
   }
 
   #phone {
@@ -219,9 +219,25 @@ top: 40px;
     margin-left: 10px; /* Adjust the margin as needed */
   }
 
-  #content, #content2, #content3 {
+  #content, #content2, #content3, #content4 {
     flex-grow: 1; /* Allow the content to grow to fill the available space */
   }
 
+#lupa2{
+    top: -30px;
+}
+
+#dole{
+    top: -40px;
+}
+
+#letter{
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+#container4{
+    top: -30px;
+}
 
 
