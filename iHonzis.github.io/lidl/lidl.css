@@ -199,7 +199,7 @@ top: 40px;
     display: flex;
   }
 
-  #container, #container2 {
+  #container, #container2, #container3 {
     display: flex;
     align-items: center; /* Align items vertically */
     margin-right: 100px; /* Adjust the margin as needed */
@@ -210,7 +210,7 @@ top: 40px;
     margin-left: 10px;
   }
 
-  #content, #content2 {
+  #content, #content2, #content3 {
     display: flex;
     flex-direction: column;
   }
@@ -219,7 +219,7 @@ top: 40px;
     margin-left: 10px; /* Adjust the margin as needed */
   }
 
-  #content, #content2 {
+  #content, #content2, #content3 {
     flex-grow: 1; /* Allow the content to grow to fill the available space */
   }
 
