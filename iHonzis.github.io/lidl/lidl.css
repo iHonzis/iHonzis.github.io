@@ -194,3 +194,27 @@ top: 40px;
     margin-right: 90px;
     margin-bottom: 50px;
 }
+
+#container {
+    display: flex;
+  }
+
+  #phone {
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #vsedni, #vikend {
+    top:-30px;
+}
+
+#vikend{
+    margin-bottom: 40px;
+}
+
+

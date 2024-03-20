@@ -16,11 +16,15 @@ body {
     display: inline-block;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: black;
 }
 
 #logo2, #slogan2{
     top: -180px;
     padding-right: 100px;
+    text-decoration: none;
+    color: black;
 }
 
 #slogan, #slogan2{
