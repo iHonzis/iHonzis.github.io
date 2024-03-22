@@ -73,8 +73,9 @@ form{
     padding-top: 30;
 }
 
-#love{
+#love, #weight, #phone{
     padding-left: 50px;
+    text-decoration: none;
 }
 
 #weight, #nakup{
@@ -90,7 +91,7 @@ form{
     text-decoration: none;
 }
 
-#submenu{
+#lista{
     background-color: rgb(192, 190, 190);
     top: 0;
     right: 0;
@@ -240,4 +241,30 @@ top: 40px;
     top: -30px;
 }
 
+/* Initial state of the submenu is not displayed */
+.submenu2 {
+    display: none;
+    position: absolute;
+    left: 110px;
+    background-color: #f9f9f9; /* Background color of submenu */
+    min-width: 260px; /* Minimum width of submenu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+    z-index: 1;
+}
 
+/* The submenu will be displayed when hovering over the menu link */
+.menu-link2:hover .submenu2 {
+    display: block;
+}
+
+/* Style for labels within the submenu */
+.menu-link2 .submenu2 label {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-link2 .submenu2 label:hover {
+    background-color: #d59494; /* Background color when hovering over submenu items */
+}
