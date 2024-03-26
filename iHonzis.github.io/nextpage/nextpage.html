@@ -5,8 +5,8 @@
     <!-- info o strance -->
     <meta charset="UTF-8">
     <title>Lidl iWant</title>
-    <link rel="stylesheet" type="text/css" href="lidl.css">
-    <script src="lidl.js"></script>
+    <link rel="stylesheet" type="text/css" href="nextpage.css">
+    <script src="nextpage.js"></script>
 
     <style>
         .container {
@@ -29,67 +29,44 @@
 </head>
 
 <body>
-    <!-- co se zobrazi -->
 
-    <div id="notification">
-        <p><strong>Uzavřeno, nová v květnu</strong></p>
-        <!-- Button to close/hide the div -->
-        <button onclick="hideDiv()">X</button>
-    </div>
+    <a href="../lidl/lidl.html">
+        <h2 id="logo">iWant logo</h2>
+      </a>
 
+      <a href="../lidl/lidl.html">
+        <h2 id="slogan"> Apple Premium Partner</h2>
+      </a>
 
-
-
-    <h2 id="logo">iWant logo</h2>
-
-    <h2 id="slogan"> Apple Premium partner </h2>
-
-    <form id="searchForm" action="../nextpage/nextpage.html" method="get"
+    <form id="searchForm"
     >
-        <input style="width: 500px" type="text" id="search" name="search" placeholder=" (Ne)hledej..."
+        <input style="width: 510px" type="text" id="search" name="search" placeholder=" (Ne)hledej..."
         title="ano,vim ze to je divne maly">
-        <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
-          <img id="lupa" src="lupa.jpeg" height="46" alt="Submit">
-      </button>
+        <a id="lupa" href="https://www.swiss.com/ch/en/homepagew" title="ano, ma byt uvnitr" style="padding-left: 10px">
+            <img src="../lidl/lupa.jpeg" height="46">
+        </a>
 
     </form>
 
-    <script>
-      // Add event listener for image click
-      document.getElementById('searchForm').addEventListener('submit', function(event) {
-          // Prevent default form submission
-          event.preventDefault();
-
-          // Get the value entered into the input field
-          var searchString = document.getElementById('search').value;
-
-          // Encode the search string to make it URL-safe
-          var encodedSearchString = encodeURIComponent(searchString);
-
-          // Redirect to the next page with the search string as a parameter in the URL
-          window.location.href = '../nextpage/nextpage.html?search=' + encodedSearchString;
-      });
-  </script>
-
     <a href="https://genius.com/Naflexx-and-yung-tt-od-srdca-pre-love-lyrics" id="love">
-        <img src="srdce.jpeg" height="46">
+        <img src="../lidl/srdce.jpeg" height="46">
     </a>
 
     <a href="https://oktagonmma.com/cs/" id="weight">
-        <img src="vaha.jpeg" height="46">
+        <img src="../lidl/vaha.jpeg" height="46">
     </a>
 
     <a href="https://www.mp.cz" id="phone">
-        <img src="mobil.jpeg" height="46">
+        <img src="../lidl/mobil.jpeg" height="46">
     </a>
 
     <a href="https://github.com/gfdgf" id="login">
-        <img src="clovek.png" height="46">
+        <img src="../lidl/clovek.png" height="46">
         <label id="loginLabel">Login</label>
     </a>
 
-    <a href="https://www.mariuspedersen.cz" id="login">
-        <img src="kosik.png" height="36">
+    <a href="https://www.mariuspedersen.cz" id="nakup">
+        <img src="../lidl/kosik.png" height="36">
         <label id="loginLabel">Cart</label>
     </a>
 
@@ -97,24 +74,11 @@
 
     <!-- <hr> -->
 
-    <div id="lista">
+    <div id="submenu">
 
         <a href="https://github.com/gfdgf" id="login">
-            <a id="loginLabel" href="../login/login.html" style="color: grey; text-decoration: none;">Login <sup style="color: pink;">New</sup></a>
-        </a>
-
-
-
-            <a class="menu-link2">
-              <label id="loginLabel">Login2 <sup>New</sup></label>
-
-              <div class="submenu2">
-                  <label>Jedna <sup>New</sup></label>
-                  <label>Dva</label>
-                  <label>Tri</label>
-              </div>
-          </a>
-
+            <label id="loginLabel" color="grey">Login <sup color="pink">New</sup> </label>
+            <label id="loginLabel">Login2 <sup>New</sup></label>
             <label id="loginLabel">Login3<label>
             <label id="loginLabel">Login4 <sup>New</sup></label>
             <label id="loginLabel">Login5 <sup>New</sup></label>
@@ -122,11 +86,14 @@
             <label id="loginLabel">Login7</label>
             <label id="loginLabel">Login8</label>
             <label id="loginLabel">Login9</label>
-
+        </a>
 
         <a href="#" class="menu-link">
-            <img src="menu.webp" height="36" id="napravo">
-
+            <img src="../lidl/menu.webp" height="36" id="napravo">
+            <label id="napravo">Napravo<sup>New</sup></label>
+            <label id="napravo">Napravo2</label>
+            <label id="napravo">Napravo3</label>
+            <label id="napravo">Napravo4</label>
 
             <div class="submenu">
                 <label>Jedna <sup>New</sup></label>
@@ -134,144 +101,43 @@
                 <label>Tri</label>
                 <label>Ctyri</label>
             </div>
-
         </a>
-            <label id="napravo">Napravo<sup>New</sup></label>
-            <label id="napravo">Napravo2</label>
-            <label id="napravo">Napravo3</label>
-            <label id="napravo">Napravo4</label>
 
-    </div>
 
-    <div>
-        <img src="dodelat.jpeg" id="velky">
     </div>
 
     <hr>
 
-    <h2>Countdown to take off</h2>
+    <h1 id="searchStringDisplay"></h1>
 
-<!-- Display the countdown timer in an element -->
-<p id="demo"></p>
+    <script>
+        // Function to parse URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Mar 15, 2024 11:00:00").getTime();
+        // Get the search string from the URL
+        var searchString = getParameterByName('search');
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-    <a href="../index.html">Back to index</a>
+        // Update the content of the h1 element with the search string
+        document.getElementById('searchStringDisplay').textContent = searchString;
+    </script>
 
 <hr>
 
-<div class="container">
-    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
-    <div class="rectangle">Konkretni</div>
-    </a>
+<a href="../lidl/lidl.html">
+  <h2 id="logo2">iWant logo</h2>
+</a>
 
-    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
-    <div class="rectangle">Ikony</div>
-    </a>
-
-    <a id="odkaz" href="https://github.com/gfdgf" target="_blank">
-    <div class="rectangle">Produktu</div>
-    </a>
-  </div>
-
-
-<hr>
-
-<div class="flex-container">
-  <div id="container">
-    <a href="https://www.mp.cz" class="phone">
-      <img src="mobil.jpeg" height="60">
-    </a>
-
-    <div id="content">
-      <h2 class="cislo">telefonni cislo</h2>
-      <div class="vsedni">Po-Patek</div>
-      <div class="vikend">So-Ne</div>
-    </div>
-  </div>
-
-  <div id="container2">
-    <a href="https://www.mp.cz" class="phone">
-      <img src="mobil.jpeg" height="60">
-    </a>
-
-    <div id="content2">
-      <h2 class="cislo">telefonni cislo</h2>
-      <div class="vsedni">To same</div>
-      <div class="vikend">trochu jinak</div>
-    </div>
-  </div>
-
-  <div id="container3">
-    <a href="https://www.mp.cz" class="phone">
-      <img src="clovek.png" height="60">
-    </a>
-
-    <div id="content3">
-      <h2 class="cislo">Email</h2>
-      <div class="vsedni">Dotaz?</div>
-      <div class="vikend">tak napis.</div>
-    </div>
-  </div>
-
-  <div id="container4">
-
-    <div id="content4">
-      <h2 class="cislo" id="letter">Newsletter</h2>
-
-      <form id="dole">
-        <input style="width: 310px" type="text" id="search" name="search" placeholder=" (Ne)hledej..."
-        title="ano,vim ze to je divne maly">
-        <a id="lupa2" href="https://www.swiss.com/ch/en/homepagew" title="ano, ma byt uvnitr" style="padding-left: 10px">
-            <img src="lupa.jpeg" height="26">
-        </a>
-
-    </form>
-    <div class="vsedni">
-        Zadej email</div>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<hr>
-
-<h2 id="logo2">iWant logo</h2>
-<h2 id="slogan2"> Apple Premium partner </h2>
+<a href="../lidl/lidl.html">
+    <h2 id="slogan2"> Apple Premium Partner</h2>
+  </a>
 
 <table id="rest">
     <tr>
@@ -352,7 +218,6 @@ var x = setInterval(function() {
     </tr>
 
   </table>
-<!-- itw 284 -->
 
 </body>
 
