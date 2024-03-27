@@ -268,3 +268,22 @@ top: 40px;
 .menu-link2 .submenu2 label:hover {
     background-color: #d59494; /* Background color when hovering over submenu items */
 }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper {
+    padding: 0 78px;
+    text-align: center;
+}
+
+.text-container {
+    margin-top: 10px; /* Adjust as needed */
+    padding: 0px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
