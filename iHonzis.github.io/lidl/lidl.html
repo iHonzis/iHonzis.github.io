@@ -24,6 +24,48 @@
         .rectangle:last-child {
           margin-right: 0;
         }
+
+        /* Style for the image slider container */
+        .slider-container {
+          position: relative;
+          width: 100%;
+          max-width: 800px;
+          margin-left: auto ;
+          margin-right: auto;
+
+          overflow: hidden;
+      }
+
+      .slider-container img {
+          width: 100%;
+          display: none;
+      }
+
+      .slider-container img.active {
+          display: block;
+      }
+
+      /* Style for the navigation buttons */
+      .nav-button {
+          position: fixed;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          z-index: 10;
+          border-radius: 50%;
+      }
+
+      .nav-button.left {
+          left: 30px;
+      }
+
+      .nav-button.right {
+          right: 30px;
+      }
       </style>
 
 </head>
@@ -143,9 +185,27 @@
 
     </div>
 
-    <div>
-        <img src="dodelat.jpeg" id="velky">
-    </div>
+    <div class="slider-container">
+      <button class="nav-button left" onclick="changeImage(-1)">&#10094;</button>
+      <img src="dodelat.jpeg" class="active" alt="Image 1">
+      <img src="druhy.jpeg" alt="Image 2">
+      <button class="nav-button right" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script>
+      let currentImageIndex = 0;
+      const images = document.querySelectorAll('.slider-container img');
+
+      function changeImage(direction) {
+          images[currentImageIndex].classList.remove('active');
+          currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+          images[currentImageIndex].classList.add('active');
+      }
+
+      //function hideDiv() {
+        //  document.getElementById("notification").style.display = "none";
+      //}
+  </script>
 
     <hr>
 
